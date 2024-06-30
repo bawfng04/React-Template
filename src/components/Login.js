@@ -4,6 +4,7 @@ import React, { useState } from "react";
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
 
   const handleLogin = (event) => {
@@ -14,8 +15,12 @@ function Login({ onLogin }) {
       setError("Invalid username or password");
       setTimeout(() => {
         setError("");
-      }, 3000);
+      }, 8000);
     }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -31,15 +36,25 @@ function Login({ onLogin }) {
             onChange={(e) => setUsername(e.target.value)}
           />
           <br />
+
           <label className="lab">Password: </label>
-          <input
-            className="input"
-            type="password"
-            placeholder="Enter Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <br />
+          <div className="passField">
+            <input
+              className="input"
+              type={showPassword ? "text" : "password"}
+              placeholder="Enter Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button
+              type="button"
+              className="showPasswordButton"
+              onClick={togglePasswordVisibility}
+            >
+              {showPassword ? "Hide" : "Show"}
+            </button>
+          </div>
+
           <button className="submitButton" type="submit">
             Login
           </button>
