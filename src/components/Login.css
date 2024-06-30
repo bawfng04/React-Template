@@ -1,0 +1,80 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+}
+
+.Main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.container{
+    background-color: #ffffff;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 500px;
+}
+
+.lab{
+    display: block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 10px;
+}
+.input{
+    font-style: italic;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.input::placeholder{
+    color: #ccc;
+    font-style: italic;
+}
+.input:focus{
+    border: 1px solid #007bff;
+}
+.input:hover{
+    transform: scale(1.05);
+}
+
+
+.submitButton{
+    padding: 15px;
+    margin-top: 50px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+.submitButton:hover{
+    transform: translateY(-10px);
+}
+
+
+.error {
+  color: black;
+  background-color: #e63946;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.8 rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.input, .submitButton {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
