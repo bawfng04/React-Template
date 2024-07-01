@@ -66,19 +66,34 @@ body {
     transform: translateY(-2px);
 }
 
-.submitButton{
+.submitButton, .registerButton{
     padding: 15px;
-    margin-top: 50px;
     border-radius: 5px;
     width: 100%;
-    background-color: #007bff;
     color: white;
     transition: transform 0.3s ease-in-out;
 }
-.submitButton:hover{
+
+.submitButton:hover, .registerButton:hover{
     transform: scale(1.05);
 }
 
+.submitButton{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+}
+
+.registerButton{
+    margin-top: 10px;
+    background-color: #cb7525;
+}
+
+.or {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    text-align: center;
+}
 
 .error {
   color: black;
@@ -91,10 +106,11 @@ body {
   animation: slideIn 0.5s ease-in-out;
 }
 
-.input, .submitButton {
+.input, .submitButton, registerButton {
   box-sizing: border-box;
   width: 100%;
   padding: 15px;
   display: inline-block;
   transition: all 0.3s ease-in-out;
 }
+
