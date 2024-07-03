@@ -2,8 +2,8 @@ import "./Main.css";
 
 function Main() {
   return (
-    <div className="Main">
-      <h1>Main</h1>
+    <div className="main">
+      <h1>Test</h1>
     </div>
   );
 }

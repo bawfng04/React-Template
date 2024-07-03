@@ -40,6 +40,7 @@ function Login({ onLogin }) {
     <div className="Main">
       {isRegistering ? (
         <Register
+          //set the onRegister prop to false
           onRegister={handleRegister}
           onCancel={() => setIsRegistering(false)}
         />

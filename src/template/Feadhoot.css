@@ -1,20 +1,33 @@
+.header, .footer{
+  background: linear-gradient(135deg, #282828fa 0%, #14141472 50%, #17171794 100%);
+}
+
 /*Header*/
 .header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
   margin: 0;
   padding: 0rem;
   animation: slideIn 1s ease;
 }
 
 .appName{
+  display: flex;
+  align-items: center;
   font-family: 'VNF-Comic-Sans';
   color: white;
   font-size: 0.8rem;
   margin-left: 1rem;
   animation: flipIn 1s ease;
+}
+
+.appLogo{
+  align-items: center;
+  align-content: center;
+  margin-left: 1rem;
+  max-height: 65px;
+  padding: 0px;
 }
 
 .headerComponents{
@@ -72,10 +85,7 @@
 
 
 /*Footer*/
-
-
 .footer{
-  background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
   color: white;
   padding: 5px;
   justify-content: center;
@@ -100,13 +110,12 @@
   transition: transform 0.5s ease;
 }
 
-
 .socialMediaLinks a{
   display: inline-flex;
   justify-content: center;
   align-items: center;
   margin: 0 10px 10px;
-  color: rgb(107, 201, 232);
+  color: rgb(0, 191, 255);
   font-size: 15px;
   transition: transform 0.5s ease;
 }
@@ -120,3 +129,10 @@
   margin-right: 8px;
 }
 
+.socialMediaLinks img{
+  margin-right: 5px;
+}
+
+.socialIcon{
+  width: 20px;
+}

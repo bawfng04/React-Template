@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Feadhoot.css";
+import appLogo from "./image/appLogo.png";
+
 function Header() {
   const [about, setAbout] = useState(false);
   const [contact, setContact] = useState(false);
@@ -25,6 +27,7 @@ function Header() {
     <div className="header">
       <div className="appName">
         <h1>React App</h1>
+        <img className="appLogo" src={appLogo} alt="App Logo"></img>
       </div>
       <div className="headerComponents">
         {/* Home */}

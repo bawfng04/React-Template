@@ -1,36 +1,50 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faGithub,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import gfgLogo from "./image/gfgLogo.png";
+import facebookLogo from "./image/facebookLogo.png";
+import instagramLogo from "./image/instagramLogo.png";
+import githubLogo from "./image/githubLogo.png";
+
 import "./Feadhoot.css";
 
 // Social media link component
-const SocialLink = ({ href, label, icon }) => (
+const SocialLink = ({ href, label, icon, isImage }) => (
   <a href={href} aria-label={label}>
-    <FontAwesomeIcon icon={icon} /> {label}
+    {isImage ? (
+      <img src={icon} alt={label} className="socialIcon" />
+    ) : (
+      <FontAwesomeIcon icon={icon} />
+    )}{" "}
+    {label}
   </a>
 );
 
-// Social media links data
 const socialLinks = [
   {
-    href: "https://www.geeksforgeeks.org/user/bangwoo4/",
-    label: "GeeksforGeeks",
-  },
-  {
-    href: "https://www.instagram.com/bangwoo4_/",
-    label: "Instagram",
-    icon: faInstagram,
+    href: "https://github.com/bangwoo4",
+    label: "Github",
+    icon: githubLogo,
+    isImage: true,
   },
   {
     href: "https://www.facebook.com/profile.php?id=100018136776949",
     label: "Facebook",
-    icon: faFacebook,
+    icon: facebookLogo,
+    isImage: true,
   },
-  { href: "https://github.com/bangwoo4", label: "Github", icon: faGithub },
+  {
+    href: "https://www.instagram.com/bangwoo4_/",
+    label: "Instagram",
+    icon: instagramLogo,
+    isImage: true,
+  },
+
+  {
+    href: "https://www.geeksforgeeks.org/user/bangwoo4/",
+    label: "GeeksforGeeks",
+    icon: gfgLogo,
+    isImage: true,
+  },
 ];
 
 function Footer() {
