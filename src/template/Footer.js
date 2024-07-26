@@ -4,6 +4,7 @@ import gfgLogo from "./image/gfgLogo.png";
 import facebookLogo from "./image/facebookLogo.png";
 import instagramLogo from "./image/instagramLogo.png";
 import githubLogo from "./image/githubLogo.png";
+import linkedinLogo from "./image/linkedinLogo.png";
 
 import "./Feadhoot.css";
 
@@ -43,6 +44,12 @@ const socialLinks = [
     href: "https://www.geeksforgeeks.org/user/bangwoo4/",
     label: "GeeksforGeeks",
     icon: gfgLogo,
+    isImage: true,
+  },
+  {
+    href: "https://www.linkedin.com/in/bangwoo4/",
+    label: "LinkedIn",
+    icon: linkedinLogo,
     isImage: true,
   },
 ];

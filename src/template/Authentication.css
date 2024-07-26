@@ -1,104 +1,106 @@
-.reText{
-    display: flex;
-    justify-content: center;
+.reText {
+  display: flex;
+  justify-content: center;
 }
 
-.Main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.container{
-    background-color: #ffffffb2;
-    padding: 50px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    width: 500px;
-    animation: fadeIn 1s ease-in-out;
+.container {
+  background-color: #ffffffb2;
+  padding: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 700px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.lab{
-    display: block;
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin: 10px;
+.lab {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin: 10px;
 }
-.input{
-    background-color: rgb(235, 230, 230);
-    font-style: italic;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
+.input {
+  background-color: rgb(235, 230, 230);
+  font-style: italic;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
 }
-.input::placeholder{
-    color: #ccc;
-    font-style: italic;
+.input::placeholder {
+  color: #ccc;
+  font-style: italic;
 }
-.input:focus{
-    border: 1px solid #007bff;
+.input:focus {
+  border: 1px solid #007bff;
 }
-.input:hover{
-    transform: translateY(-2px);
-}
-
-.passField{
-    display: flex;
-    justify-content: space-between;
+.input:hover {
+  transform: translateY(-2px);
 }
 
-.passField .showPasswordButton{
-    padding: 15px;
-    width: 20%;
-    border-radius: 5px;
-    background-color: #0c7ff9;
-    color: white;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.passField .showPasswordButton:hover{
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-    background-color: #0056b3;
-    transform: translateY(-2px);
+.passField {
+  display: flex;
+  justify-content: space-between;
 }
 
-.submitButton, .registerButton{
-    padding: 15px;
-    border-radius: 5px;
-    width: 100%;
-    color: white;
-    transition: transform 0.3s ease-in-out;
+.passField .showPasswordButton {
+  padding: 15px;
+  width: 20%;
+  border-radius: 5px;
+  background-color: #0c7ff9;
+  color: white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.passField .showPasswordButton:hover {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
-.submitButton:hover, .registerButton:hover{
-    transform: scale(1.05);
+.submitButton,
+.registerButton {
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+  color: white;
+  transition: transform 0.3s ease-in-out;
 }
 
-.submitButton{
-    margin-top: 50px;
-    margin-bottom: 10px;
-    background-color: #0c7ff9;
+.submitButton:hover,
+.registerButton:hover {
+  transform: scale(1.05);
 }
 
-.submitButton:hover{
-    background-color: #0056b3;
+.submitButton {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  background-color: #0c7ff9;
 }
 
-.registerButton{
-    margin-top: 10px;
-    background-color: #cb7525;
+.submitButton:hover {
+  background-color: #0056b3;
 }
 
-.registerButton:hover{
-    background-color: #a45f1f;
+.registerButton {
+  margin-top: 10px;
+  background-color: #cb7525;
+}
+
+.registerButton:hover {
+  background-color: #a45f1f;
 }
 
 .or {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: block;
-    text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: block;
+  text-align: center;
 }
 
 .error {
@@ -112,7 +114,9 @@
   animation: slideIn 0.5s ease-in-out;
 }
 
-.input, .submitButton, registerButton {
+.input,
+.submitButton,
+registerButton {
   box-sizing: border-box;
   width: 100%;
   padding: 15px;
@@ -120,17 +124,17 @@
   transition: all 0.3s ease-in-out;
 }
 
-.cancelButton{
-    padding: 15px;
-    margin-top: 20px;
-    width: 100%;
-    transition: transform 0.3s ease-in-out;
-    background-color: #6c757d;
-    color: white;
-    border-radius: 5px;
+.cancelButton {
+  padding: 15px;
+  margin-top: 20px;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 5px;
 }
 
-.cancelButton:hover{
-    transform: scale(1.05);
-    background-color: #505151;
+.cancelButton:hover {
+  transform: scale(1.05);
+  background-color: #505151;
 }
