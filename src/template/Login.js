@@ -9,6 +9,12 @@ function Login({ onLogin }) {
   const [error, setError] = useState("");
   const [isRegistering, setIsRegistering] = useState(false);
 
+  function freezeError() {
+    setTimeout(() => {
+      setError("");
+    }, 8000);
+  }
+
   const handleLogin = (event) => {
     event.preventDefault();
     const userAccounts = JSON.parse(
@@ -17,14 +23,14 @@ function Login({ onLogin }) {
     if (userAccounts[username] && userAccounts[username] === password) {
       onLogin();
     } else {
-      if (username === "bang" && password === "bang") {
-        onLogin();
+      if (username === "") {
+        setError("Please input username");
+      } else if (password === "") {
+        setError("Password can't be empty");
       } else {
         setError("Invalid username or password");
-        setTimeout(() => {
-          setError("");
-        }, 8000);
       }
+      freezeError();
     }
   };
 
@@ -48,37 +54,41 @@ function Login({ onLogin }) {
         <form onSubmit={handleLogin}>
           <div className="container">
             <h1 className="reText">Login</h1>
-            <label className="lab">Username: </label>
-            <input
-              className="input"
-              type="text"
-              placeholder="Enter Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <br />
-            <label className="lab">Password: </label>
-            <div className="passField">
+            <div className="input-container">
               <input
                 className="input"
-                type={showPassword ? "text" : "password"}
-                placeholder="Enter Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                type="text"
+                placeholder="   "
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
-              <button
-                type="button"
-                className="showPasswordButton"
-                onClick={togglePasswordVisibility}
-              >
-                {showPassword ? "Hide" : "Show"}
-              </button>
+              <label className="lab">Username </label>
+            </div>
+            <br />
+            <div className="input-container">
+              <div className="passField">
+                <input
+                  className="input"
+                  type={showPassword ? "text" : "password"}
+                  placeholder="   "
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <label className="lab">Password </label>
+                <button
+                  type="button"
+                  className="showPasswordButton"
+                  onClick={togglePasswordVisibility}
+                >
+                  {showPassword ? "Hide" : "Show"}
+                </button>
+              </div>
             </div>
             <button className="submitButton" type="submit">
               Login
             </button>
             <br />
-            <label className="or">or:</label>
+            <label className="or">or</label>
             <button
               type="button"
               className="registerButton"
