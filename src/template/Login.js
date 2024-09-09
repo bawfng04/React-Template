@@ -1,19 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Register from "./Register";
 import "./Authentication.css";
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+  //const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [isRegistering, setIsRegistering] = useState(false);
+  const [logged, setLogged] = useState(false);
 
-  function freezeError() {
-    setTimeout(() => {
-      setError("");
-    }, 8000);
-  }
+  useEffect(() => {
+    let timeoutId;
+    if (error) {
+      timeoutId = setTimeout(() => {
+        setError("");
+      }, 8000);
+    }
+    return () => clearTimeout(timeoutId);
+  }, [error]);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -21,7 +26,8 @@ function Login({ onLogin }) {
       localStorage.getItem("userAccounts") || "{}"
     );
     if (userAccounts[username] && userAccounts[username] === password) {
-      onLogin();
+      setLogged(true);
+      setTimeout(onLogin, 3000);
     } else {
       if (username === "") {
         setError("Please input username");
@@ -30,7 +36,6 @@ function Login({ onLogin }) {
       } else {
         setError("Invalid username or password");
       }
-      freezeError();
     }
   };
 
@@ -38,9 +43,9 @@ function Login({ onLogin }) {
     setIsRegistering(false);
   };
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
+  // const togglePasswordVisibility = () => {
+  //   setShowPassword(!showPassword);
+  // };
 
   return (
     <div className="Main">
@@ -52,6 +57,12 @@ function Login({ onLogin }) {
         />
       ) : (
         <form onSubmit={handleLogin}>
+          {logged && (
+            <div className="regSucessNoti">
+              <p>Login successful!</p>
+            </div>
+          )}
+
           <div className="container">
             <h1 className="reText">Login</h1>
             <div className="input-container">
@@ -62,26 +73,27 @@ function Login({ onLogin }) {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
-              <label className="lab">Username </label>
+              <label className="lab">Username</label>
             </div>
             <br />
             <div className="input-container">
               <div className="passField">
                 <input
                   className="input"
-                  type={showPassword ? "text" : "password"}
+                  //type={showPassword ? "text" : "password"}
+                  type="password"
                   placeholder="   "
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <label className="lab">Password </label>
-                <button
+                {/* <button
                   type="button"
                   className="showPasswordButton"
                   onClick={togglePasswordVisibility}
                 >
                   {showPassword ? "Hide" : "Show"}
-                </button>
+                </button> */}
               </div>
             </div>
             <button className="submitButton" type="submit">

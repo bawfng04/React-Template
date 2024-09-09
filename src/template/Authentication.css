@@ -1,23 +1,45 @@
+.Main {
+  background-image: url("https://wallpapers.com/images/hd/aesthetic-computer-4k-c9qdhe02pr84wh3a.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.container {
+  background-color: #ffffff2d;
+  padding: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 500px;
+  animation: fadeIn 1s ease-in-out;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.regSucessNoti{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 20px 2px 20px;
+  border: 2px solid rgb(143, 253, 156);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.168);
+  margin: 10px 0px 20px 0px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  animation: slideIn 1s;
+  color: rgb(255, 255, 255);
+}
 
 .reText {
   display: flex;
   justify-content: center;
-}
-
-.Main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.container {
-  background-color: #ffffffb2;
-  padding: 50px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  width: 700px;
-  animation: fadeIn 1s ease-in-out;
+  margin: 0px 50px 70px 50px
 }
 
 .lab {
@@ -25,6 +47,7 @@
   font-weight: bold;
   font-size: 0.9rem;
   margin: 10px;
+  color: white;
 }
 .input {
   background-color: rgb(235, 230, 230);
@@ -153,13 +176,15 @@
   transform: translateY(-50%);
   transition: all 0.3s ease;
   pointer-events: none;
-  color: #aaa;
+  color: #454545;
 }
 
 .input-container input:focus + label,
 .input-container input:not(:placeholder-shown) + label {
-  top: -20px;
+  top: -25px;
   left: 10px;
   font-size: 15px;
-  color: rgb(0, 0, 0);
+  color: white;
 }
+
+

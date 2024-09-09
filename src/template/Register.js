@@ -6,6 +6,12 @@ function Register({ onRegister, onCancel }) {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const [registerSuccess, setRegisterSucess] = useState(false);
+  const [redirect, setRedirect] = useState(false);
+
+  const handleRedirect = () => {
+    setRedirect(true);
+  };
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -42,12 +48,24 @@ function Register({ onRegister, onCancel }) {
     }
     userAccounts[username] = password;
     localStorage.setItem("userAccounts", JSON.stringify(userAccounts));
-    onRegister();
-    alert("Account created successfully. You can now login.");
+    setRegisterSucess(true);
+    setTimeout(handleRedirect, 1000);
+    setTimeout(onRegister, 3000);
   };
 
   return (
     <div className="Main">
+      {registerSuccess && (
+        <div className="regSucessNoti">
+          <p>Registration successful!</p>
+        </div>
+      )}
+      {redirect && (
+        <div className="regSucessNoti">
+          <p>Redirecting you to home page...</p>
+        </div>
+      )}
+
       <form onSubmit={handleRegister}>
         <div className="container">
           <div>
