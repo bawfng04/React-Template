@@ -20,7 +20,53 @@ background-image: linear-gradient(
   hsl(0deg 4% 21%) 100%
 );
 }
-  
+
+@keyframes draw {
+  from {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 15px;
+    height: 30px;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  10% {
+    transform: scale(1.5);
+    transform: translateY(-50px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(0.8);
+      opacity: 0.6;
+  }
+  70% {
+      transform: scale(1.2);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1.4);
+      opacity: 0;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -38,7 +84,6 @@ background-image: linear-gradient(
     opacity: 0;
   }
   to {
-
     transform: translateY(0);
     opacity: 1;
   }

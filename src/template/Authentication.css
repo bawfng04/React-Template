@@ -20,6 +20,15 @@
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
+/*test*/
+
+.logged{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .regSucessNoti{
   display: flex;
   flex-direction: column;
@@ -36,10 +45,37 @@
   color: rgb(255, 255, 255);
 }
 
+.tick {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  animation: pop 1.5s ease-out;
+  margin-bottom: 20px;
+}
+
+.tick::before {
+  content: '';
+  width: 15px;
+  height: 30px;
+  border: solid white;
+  border-width: 0 5px 5px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 5px;
+  animation: draw 0.5s ease-out forwards;
+}
+
 .reText {
   display: flex;
   justify-content: center;
-  margin: 0px 50px 70px 50px
+  margin: 0px 50px 70px 50px;
+  font-size: 40px;
 }
 
 .lab {
@@ -49,22 +85,26 @@
   margin: 10px;
   color: white;
 }
+
 .input {
-  background-color: rgb(235, 230, 230);
+  background-color: rgb(255, 255, 255);
   font-style: italic;
   padding: 15px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #838383;
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
+
 .input::placeholder {
-  color: #ccc;
+  color: #000000;
   font-style: italic;
 }
+
 .input:focus {
   border: 1px solid #007bff;
 }
+
 .input:hover {
   transform: translateY(-2px);
 }
@@ -95,12 +135,27 @@
   width: 100%;
   color: white;
   transition: transform 0.3s ease-in-out;
+  border: 1px solid black(255, 255, 255);
+}
+
+.cancelButton {
+  padding: 15px;
+  margin-top: 20px;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 5px;
 }
 
 .submitButton:hover,
-.registerButton:hover {
+.registerButton:hover,
+.cancelButton:hover {
   transform: scale(1.05);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
+
 
 .submitButton {
   margin-top: 50px;
@@ -148,20 +203,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.cancelButton {
-  padding: 15px;
-  margin-top: 20px;
-  width: 100%;
-  transition: transform 0.3s ease-in-out;
-  background-color: #6c757d;
-  color: white;
-  border-radius: 5px;
-}
-
-.cancelButton:hover {
-  transform: scale(1.05);
-  background-color: #505151;
-}
 
 
 .input-container {
@@ -176,7 +217,7 @@
   transform: translateY(-50%);
   transition: all 0.3s ease;
   pointer-events: none;
-  color: #454545;
+  color: #3e3e3e;
 }
 
 .input-container input:focus + label,

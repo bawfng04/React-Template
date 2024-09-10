@@ -27,7 +27,7 @@ function Login({ onLogin }) {
     );
     if (userAccounts[username] && userAccounts[username] === password) {
       setLogged(true);
-      setTimeout(onLogin, 3000);
+      setTimeout(onLogin, 1500);
     } else {
       if (username === "") {
         setError("Please input username");
@@ -58,8 +58,11 @@ function Login({ onLogin }) {
       ) : (
         <form onSubmit={handleLogin}>
           {logged && (
-            <div className="regSucessNoti">
-              <p>Login successful!</p>
+            <div className="logged">
+              <div className="regSucessNoti">
+                <p>Login successful!</p>
+              </div>
+              <div className="tick"></div>
             </div>
           )}
 
