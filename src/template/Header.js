@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Feadhoot.css";
 import appLogo from "./image/appLogo.png";
+import "./Feadhoot.css";
 
-function Header() {
+function Header({ onLogout }) {
   const [about, setAbout] = useState(false);
   const [contact, setContact] = useState(false);
   const aboutRef = useRef(null);
@@ -23,6 +23,7 @@ function Header() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
   return (
     <div className="header">
       <div className="appName">
@@ -30,41 +31,46 @@ function Header() {
         <img className="appLogo" src={appLogo} alt="App Logo"></img>
       </div>
       <div className="headerComponents">
-        {/* Home */}
-        <button
-          className="headerButton"
-          onClick={() => (window.location.href = "http://localhost:3000/")}
-        >
-          Home
-        </button>
-        {/* About */}
-        <button className="headerButton" onClick={toggleAbout}>
-          About
-        </button>
-        {about && (
-          <div ref={aboutRef} className="info">
-            <p>Change this</p>
-            <button className="closeInfoButton" onClick={toggleAbout}>
-              Close
-            </button>
-          </div>
-        )}
-        {/* Contact */}
-        <button className="headerButton" onClick={toggleContact}>
-          Contact
-        </button>
-        {contact && (
-          <div ref={contactRef} className="info">
-            <p>
-              <strong>bangwoo4</strong>
-              <br />
-              <strong>nguyendinhbang53az@gmail.com</strong>
-            </p>
-            <button className="closeInfoButton" onClick={toggleContact}>
-              Close
-            </button>
-          </div>
-        )}
+        <div className="aHeader">
+          <ul>
+            <a href="/">Home</a>
+            <a href="/shop">Shop </a>
+            <a href="/blog">Blog</a>
+          </ul>
+        </div>
+        <div>
+          {/* About */}
+          <button className="headerButton" onClick={toggleAbout}>
+            About
+          </button>
+          {about && (
+            <div ref={aboutRef} className="info">
+              <p>Change this</p>
+              <button className="closeInfoButton" onClick={toggleAbout}>
+                Close
+              </button>
+            </div>
+          )}
+          {/* Contact */}
+          <button className="headerButton" onClick={toggleContact}>
+            Contact
+          </button>
+          {contact && (
+            <div ref={contactRef} className="info">
+              <p>
+                <strong>bangwoo4</strong>
+                <br />
+                <strong>nguyendinhbang53az@gmail.com</strong>
+              </p>
+              <button className="closeInfoButton" onClick={toggleContact}>
+                Close
+              </button>
+            </div>
+          )}
+          <button className="logoutButton" onClick={onLogout}>
+            Log out
+          </button>
+        </div>
       </div>
     </div>
   );

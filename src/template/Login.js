@@ -27,6 +27,9 @@ function Login({ onLogin }) {
     );
     if (userAccounts[username] && userAccounts[username] === password) {
       setLogged(true);
+      //added
+      localStorage.setItem("isLoggedIn", "true");
+      //end
       setTimeout(onLogin, 1500);
     } else {
       if (username === "") {
