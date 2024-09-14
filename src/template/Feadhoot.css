@@ -1,7 +1,7 @@
 .header, .footer{
   background: linear-gradient(135deg, #282828fa 0%, #14141472 50%, #17171794 100%);
-}
 
+}
 /*Header*/
 .header{
   display: flex;
@@ -70,8 +70,6 @@
   color: rgb(255, 166, 0);
 }
 
-
-
 .info {
   background-color: #f1f1f1;
   padding: 10px;
@@ -81,7 +79,7 @@
   z-index: 1;
   top: 0%;
   width: 300px;
-  animation: fadeIn 0.5s ease;
+  animation: fadeInReverse 0.5s ease;
 }
 
 .closeInfoButton{

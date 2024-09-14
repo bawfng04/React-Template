@@ -1,3 +1,19 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.totalContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.mainContent{
+  flex-grow: 1;
+}
+
 body {
   /*background of the login page*/
   margin: 0;
@@ -71,6 +87,17 @@ background-image: linear-gradient(
   from {
     opacity: 0;
     transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInReverse {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;

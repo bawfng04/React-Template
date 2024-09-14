@@ -62,7 +62,7 @@ function Register({ onRegister, onCancel }) {
       )}
       {redirect && (
         <div className="regSucessNoti">
-          <p>Redirecting you to home page...</p>
+          <p>Redirecting you to login page...</p>
         </div>
       )}
 

@@ -1,5 +1,12 @@
+import "./configAllPages.css";
+import "./Blog.css";
+
 const Blog = () => {
-  return <h1>Blog</h1>;
+  return (
+    <div className="blog">
+      <h1>Blog</h1>
+    </div>
+  );
 };
 
 export default Blog;

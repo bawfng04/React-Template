@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Shop from "./core/pages/Shop";
-import Blog from "./core/pages/Blog";
-import "./App.css";
 import Login from "./template/Login";
 import Header from "./template/Header";
-import Main from "./core/Main";
 import Footer from "./template/Footer";
+import Shop from "./core/pages/Shop";
+import Blog from "./core/pages/Blog";
+import Home from "./core/Home";
+import "./App.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
@@ -31,15 +31,17 @@ function App() {
     <div className="App">
       {!isLoggedIn && <Login onLogin={() => setIsLoggedIn(true)} />}
       {isLoggedIn && (
-        <div>
+        <div className="totalContainer">
           <Header onLogout={handleLogout} />
-          <BrowserRouter>
-            <Routes>
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/" element={<Main />} />
-            </Routes>
-          </BrowserRouter>
+          <div className="mainContent">
+            <BrowserRouter>
+              <Routes>
+                <Route path="/shop" element={<Shop />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/" element={<Home />} />
+              </Routes>
+            </BrowserRouter>
+          </div>
           <Footer />
         </div>
       )}

@@ -1,5 +1,12 @@
+import "./configAllPages.css";
+import "./Shop.css";
+
 const Shop = () => {
-  return <h1>Shop</h1>;
+  return (
+    <div className="shop">
+      <h1>Shop</h1>
+    </div>
+  );
 };
 
 export default Shop;
