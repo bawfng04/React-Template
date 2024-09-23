@@ -6,7 +6,7 @@ function Register({ onRegister, onCancel }) {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
-  const [registerSuccess, setRegisterSucess] = useState(false);
+  const [registerSuccess, setRegisterSuccess] = useState(false);
   const [redirect, setRedirect] = useState(false);
 
   const handleRedirect = () => {
@@ -16,6 +16,7 @@ function Register({ onRegister, onCancel }) {
   const handleRegister = (event) => {
     event.preventDefault();
     const userAccounts = JSON.parse(
+      //parse a string and return an object
       localStorage.getItem("userAccounts") || "{}"
     );
     if (userAccounts[username]) {
@@ -40,7 +41,7 @@ function Register({ onRegister, onCancel }) {
       return;
     }
     if (password !== confirmPassword) {
-      setError("Passwords do not match");
+      setError("Passwords does not match");
       setTimeout(() => {
         setError("");
       }, 8000);
@@ -48,7 +49,7 @@ function Register({ onRegister, onCancel }) {
     }
     userAccounts[username] = password;
     localStorage.setItem("userAccounts", JSON.stringify(userAccounts));
-    setRegisterSucess(true);
+    setRegisterSuccess(true);
     setTimeout(handleRedirect, 1000);
     setTimeout(onRegister, 3000);
   };

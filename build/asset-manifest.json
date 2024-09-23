@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7a5ea636.css",
+    "main.js": "/static/js/main.b5d8ef30.js",
+    "static/js/453.300043b8.chunk.js": "/static/js/453.300043b8.chunk.js",
+    "static/media/blogBackground.jpg": "/static/media/blogBackground.5aeb8b89354200a7d4eb.jpg",
+    "static/media/shopBackground.jpg": "/static/media/shopBackground.a79786b8b569dc43240e.jpg",
+    "static/media/instagramLogo.png": "/static/media/instagramLogo.765caa81321ce9b175a4.png",
+    "static/media/appLogo.png": "/static/media/appLogo.c03c0bda6baae6ec6bad.png",
+    "static/media/homepageBackground.jpg": "/static/media/homepageBackground.232927b1fce942ca8969.jpg",
+    "static/media/githubLogo.png": "/static/media/githubLogo.83ff6fa7580688845e1c.png",
+    "static/media/loginBackground.jpg": "/static/media/loginBackground.070e6a93c1be8c8686bf.jpg",
+    "static/media/facebookLogo.png": "/static/media/facebookLogo.7340ef0593315de2265a.png",
+    "static/media/gfgLogo.png": "/static/media/gfgLogo.56400933edf80a9dfeee.png",
+    "index.html": "/index.html",
+    "main.7a5ea636.css.map": "/static/css/main.7a5ea636.css.map",
+    "main.b5d8ef30.js.map": "/static/js/main.b5d8ef30.js.map",
+    "453.300043b8.chunk.js.map": "/static/js/453.300043b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a5ea636.css",
+    "static/js/main.b5d8ef30.js"
+  ]
+}
