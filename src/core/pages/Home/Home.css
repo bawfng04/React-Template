@@ -1,0 +1,12 @@
+
+.home{
+    background: url('./homepageBackground.png') no-repeat center center;
+    color: white;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.307);
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+}
